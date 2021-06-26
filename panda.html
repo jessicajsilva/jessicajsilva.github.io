@@ -1,3 +1,10 @@
+<canvas id="canvas" width="200" height="200"></canvas>
+
+<script type="text/javascript">
+
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
 var bodyX = 196;
 var bodyY = 212;
 var bodyW = 107;
@@ -17,79 +24,79 @@ var browHeight = 130;
 var counter = 0;
 
 draw = function() {
-    background(207, 254, 255);
+    ctx.background(207, 254, 255);
   
      //hands 
-   fill(3,3, 3);
+   ctx.fill(3,3, 3);
  
-ellipse(handra,handrb,handrc,handrd);
-ellipse(handla,handlb,handlc,handld);
+ctx.ellipse(handra,handrb,handrc,handrd);
+ctx.ellipse(handla,handlb,handlc,handld);
 
     //body
-    fill(219, 215, 215);
-    stroke(10, 10, 10);
-    strokeWeight(1);
-    ellipse(bodyX, bodyY, bodyW, 129);
+    ctx.fill(219, 215, 215);
+    ctx.stroke(10, 10, 10);
+    ctx.strokeWeight(1);
+    ctx.ellipse(bodyX, bodyY, bodyW, 129);
 
      
-    fill(3, 3, 3);
+    ctx.fill(3, 3, 3);
       //feets 
       //right
-   ellipse(173,268,30,40);
-   fill(240, 206, 238);
-   ellipse(173,274,13,18);
+   ctx.ellipse(173,268,30,40);
+   ctx.fill(240, 206, 238);
+   ctx.ellipse(173,274,13,18);
    //toes
-    ellipse(176,259,8,10);
-    ellipse(166,261,8,10);
-    ellipse(162,271,8,10);
-    ellipse(183,268,8,10);
+    ctx.ellipse(176,259,8,10);
+    ctx.ellipse(166,261,8,10);
+    ctx.ellipse(162,271,8,10);
+    ctx.ellipse(183,268,8,10);
    
     //left
-    fill(3,3,3);
-    ellipse(222,268,30,40);
-     fill(240, 206, 238);
-    ellipse(222,275,13,18);
+    ctx.fill(3,3,3);
+    ctx.ellipse(222,268,30,40);
+     ctx.fill(240, 206, 238);
+    ctx.ellipse(222,275,13,18);
     //toes
-    ellipse(225,259,8,10);
-    ellipse(215,260,8,10);
-    ellipse(211,270,8,10);
-     ellipse(232,268,8,10);
+    ctx.ellipse(225,259,8,10);
+    ctx.ellipse(215,260,8,10);
+    ctx.ellipse(211,270,8,10);
+     ctx.ellipse(232,268,8,10);
 
-noStroke();
+ctx.noStroke();
 
 //face 
     //ears
-    fill(48, 48, 48);
-    ellipse(151,110,40,40);// leftears
-    ellipse(236,110,40,40);//rightears
-    fill(18, 17, 17);
-    ellipse(236,110,20,20);//rightsmallear
-    ellipse(152,113,20,20);//leftsmallear
-    fill(224, 224, 224);
+    ctx.fill(48, 48, 48);
+    ctx.ellipse(151,110,40,40);// leftears
+    ctx.ellipse(236,110,40,40);//rightears
+    ctx.fill(18, 17, 17);
+    ctx.ellipse(236,110,20,20);//rightsmallear
+    ctx.ellipse(152,113,20,20);//leftsmallear
+    ctx.fill(224, 224, 224);
    
-   stroke(0, 0, 0);
-   strokeWeight(1);
+   ctx.stroke(0, 0, 0);
+   ctx.strokeWeight(1);
     //face
-    ellipse(bodyX, bodyY-70, faceW, 98); 
-   noStroke();
+    ctx.ellipse(bodyX, bodyY-70, faceW, 98); 
+   ctx.noStroke();
    //eyes
-    fill(89, 88, 88);
-    ellipse(171,145,21,25);
-    ellipse(219,145,21,25);
-    fill(5, 5, 5);
-    ellipse(172,149,12,12);
-    ellipse(219,149,12,12);
-    fill(247, 247, 247);
-     ellipse(170,147,6,6);
-    ellipse(217,147,6,6);
+    ctx.fill(89, 88, 88);
+    ctx.ellipse(171,145,21,25);
+    ctx.ellipse(219,145,21,25);
+    ctx.fill(5, 5, 5);
+    ctx.ellipse(172,149,12,12);
+    ctx.ellipse(219,149,12,12);
+    ctx.fill(247, 247, 247);
+     ctx.ellipse(170,147,6,6);
+    ctx.ellipse(217,147,6,6);
     
     //nose
-    fill(5, 5, 5);
-    ellipse(198,168,21,15);
+    ctx.fill(5, 5, 5);
+    ctx.ellipse(198,168,21,15);
     
-    fill(5, 5, 5);
-    ellipse(170,browHeight,21,7);
-    ellipse(220,browHeight,21,7);
+    ctx.fill(5, 5, 5);
+    ctx.ellipse(170,browHeight,21,7);
+    ctx.ellipse(220,browHeight,21,7);
     
 if(handrb>=184){handrb-=0.5;
 } else{handrb=191;}
@@ -108,3 +115,4 @@ if(counter >= 20){
 
 
 };
+</script>
